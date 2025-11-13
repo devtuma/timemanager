@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Manager - Domine a Si Mesmo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="landing-page">
+    <div class="landing-container">
+        <header class="landing-header">
+            <div class="logo">
+                <h1>⏱️ Timer Manager</h1>
+                <p class="tagline">Dominate Yourself</p>
+            </div>
+            <nav>
+                <button id="langToggle" class="btn-secondary">🌐 EN/PT</button>
+            </nav>
+        </header>
+
+        <main class="landing-main">
+            <section class="hero">
+                <h2 data-i18n="hero-title">Domine Seu Tempo, Domine Suas Apresentações</h2>
+                <p data-i18n="hero-description">
+                    Timer Manager é o aplicativo definitivo para quem precisa fazer apresentações,
+                    reuniões ou palestras com controle total do tempo. Pare de se preocupar com o
+                    relógio e foque no que realmente importa: seu conteúdo e sua audiência.
+                </p>
+                <div class="cta-buttons">
+                    <a href="login.html" class="btn-primary" data-i18n="btn-login">Entrar</a>
+                    <a href="register.html" class="btn-secondary" data-i18n="btn-register">Criar Conta</a>
+                </div>
+            </section>
+
+            <section class="features">
+                <h3 data-i18n="features-title">Funcionalidades Principais</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h4 data-i18n="feature1-title">Estruture Seu Tempo</h4>
+                        <p data-i18n="feature1-desc">Divida sua apresentação em pontos cronometrados com duração exata.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎤</div>
+                        <h4 data-i18n="feature2-title">Guia por Voz</h4>
+                        <p data-i18n="feature2-desc">O app fala suas palavras-chave no momento certo, mantendo você no ritmo.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h4 data-i18n="feature3-title">Sincronização em Nuvem</h4>
+                        <p data-i18n="feature3-desc">Seus projetos salvos e sincronizados entre todos os seus dispositivos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔔</div>
+                        <h4 data-i18n="feature4-title">Alertas Inteligentes</h4>
+                        <p data-i18n="feature4-desc">Notificações visuais e sonoras para manter você no controle.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h4 data-i18n="feature5-title">Progresso Visual</h4>
+                        <p data-i18n="feature5-desc">Barras de progresso coloridas mostram o andamento em tempo real.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h4 data-i18n="feature6-title">Exportar/Importar</h4>
+                        <p data-i18n="feature6-desc">Faça backup e compartilhe seus projetos facilmente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="use-cases">
+                <h3 data-i18n="usecases-title">Ideal Para</h3>
+                <ul class="use-cases-list">
+                    <li>🎓 <span data-i18n="usecase1">Defesas de TCC e Teses</span></li>
+                    <li>💼 <span data-i18n="usecase2">Reuniões Executivas</span></li>
+                    <li>🎙️ <span data-i18n="usecase3">Palestras e Conferências</span></li>
+                    <li>👨‍🏫 <span data-i18n="usecase4">Workshops e Treinamentos</span></li>
+                    <li>📺 <span data-i18n="usecase5">Apresentações de Pitch</span></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="landing-footer">
+            <p>&copy; 2025 Timer Manager. <span data-i18n="footer-rights">Todos os direitos reservados.</span></p>
+        </footer>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script>
+        document.getElementById('langToggle').addEventListener('click', () => {
+            const currentLang = localStorage.getItem('language') || 'pt';
+            const newLang = currentLang === 'pt' ? 'en' : 'pt';
+            localStorage.setItem('language', newLang);
+            location.reload();
+        });
+    </script>
+</body>
+</html>

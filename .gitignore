@@ -1,0 +1,31 @@
+# Timer Manager .gitignore
+
+# API Configuration (sensitive data)
+api/config.php
+
+# Keep config.php.example for reference
+!api/config.php.example
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Node modules (if you add build tools later)
+node_modules/
+
+# Environment files
+.env
+.env.local
