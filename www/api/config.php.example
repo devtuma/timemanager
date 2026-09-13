@@ -1,0 +1,33 @@
+<?php
+/**
+ * Database Configuration - EXAMPLE FILE
+ *
+ * INSTRUCTIONS:
+ * 1. Copy this file to config.php
+ * 2. Update the values below with your actual database credentials
+ * 3. Change the JWT_SECRET to a random, secure string
+ */
+
+// Database configuration - UPDATE THESE VALUES
+define('DB_HOST', 'localhost');              // Usually 'localhost'
+define('DB_NAME', 'timemanager');            // Your database name
+define('DB_USER', 'your_db_username');       // Your database username
+define('DB_PASS', 'your_db_password');       // Your database password
+
+// JWT Secret Key - CHANGE THIS TO A RANDOM STRING!
+// Generate one here: https://randomkeygen.com/
+define('JWT_SECRET', 'CHANGE-THIS-TO-A-RANDOM-SECRET-KEY-IN-PRODUCTION');
+
+// CORS Headers
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, Authorization');
+header('Content-Type: application/json');
+
+// Handle preflight requests
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
+// ... (rest of the file remains the same as config.php)
